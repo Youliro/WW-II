@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const user = storedUsers.find(user => user.username === username && user.password === password);
     
     if (user) {
-        window.location.href = 'index.html'; // Перенаправление на другую страницу после входа
+        window.location.href = 'main.html';
     } else {
         document.getElementById('login-error').textContent = 'Invalid username or password';
     }
@@ -26,6 +26,6 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     } else {
         storedUsers.push({ username, password });
         localStorage.setItem('users', JSON.stringify(storedUsers));
-        window.location.href = 'index.html'; // Перенаправление на другую страницу после регистрации
+        window.location.href = 'main.html';
     }
 });
